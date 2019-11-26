@@ -34,20 +34,20 @@ public class StartBookApplication {
             repository.save(new Book("Refactoring: Improving the Design of Existing Code", "Martin Fowler", new BigDecimal("47.99")));
         };
     }
-//
-//    @PostConstruct
-//    void httpUtil()
-//    {
-//            try {
-//              String res=  httpClientUtil.apiServiceUtil(new HashMap<>(),"http://127.0.0.1:8080/books",null, HttpMethod.GET);
-//                System.out.println("res"+res);
-//                HttpClientBuilder builder=HttpClientBuilder.create();
-//            }catch (Exception e)
-//            {
-//                e.printStackTrace();
-//                System.out.println("here error"+e);
-//            }
-//
-//    }
+
+    @PostConstruct
+    void httpUtil()
+    {
+            try {
+              String res=  httpClientUtil.apiServiceUtil(new HashMap<>(),"https://test-servicevivek.herokuapp.com/books",null, HttpMethod.GET);
+                System.out.println("res"+res);
+                HttpClientBuilder builder=HttpClientBuilder.create();
+            }catch (Exception e)
+            {
+                e.printStackTrace();
+                System.out.println("here error"+e);
+            }
+
+    }
 
 }

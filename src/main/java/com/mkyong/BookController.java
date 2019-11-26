@@ -27,9 +27,9 @@ public class BookController {
         Random randomGenerator = new Random();
         int randomInt = randomGenerator.nextInt(2);
 
-        if (randomInt == 1)
-            return Response.status(200).entity("1.10").build();
-        else
+//        if (randomInt == 1)
+//            return Response.status(200).entity("1.10").build();
+//        else
             return Response.status(Response.Status.SERVICE_UNAVAILABLE)
                     .entity("Service temporarily not available").build();
     }
