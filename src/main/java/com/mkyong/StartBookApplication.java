@@ -34,8 +34,7 @@ public class StartBookApplication {
             repository.save(new Book("Refactoring: Improving the Design of Existing Code", "Martin Fowler", new BigDecimal("47.99")));
         };
     }
-
-    @PostConstruct
+    
     void httpUtil()
     {
             try {
